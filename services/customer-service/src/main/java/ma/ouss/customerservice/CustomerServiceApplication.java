@@ -17,7 +17,7 @@ public class CustomerServiceApplication {
     @Bean
     CommandLineRunner init(CustomerRepository customerRepository) {
         return args ->{
-            customerRepository.save(Customer.builder().name("bissi").email("bissi@gmail.com").build());
+            customerRepository.save(Customer.builder().name("nizar").email("nizar@gmail.com").build());
             customerRepository.save(Customer.builder().name("jamila").email("jamila@gmail.com").build());
             customerRepository.save(Customer.builder().name("zouita").email("zouita@gmail.com").build());
         };
