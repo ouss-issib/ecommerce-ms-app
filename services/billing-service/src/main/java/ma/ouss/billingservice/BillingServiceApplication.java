@@ -45,13 +45,11 @@ public class BillingServiceApplication {
                 billRepository.save(bill);
 
                 products.forEach(product -> {
-                    ProductItem productItem  = ProductItem.builder()
-                            .id(new Random().nextLong())
-                            .bill(bill)
-                            .productId(product.getId())
-                            .quantity(new Random().nextInt(10) + 1)
-                            .unitPrice(product.getPrice())
-                            .build();
+                    ProductItem productItem  = new ProductItem();
+                    productItem.setUnitPrice(product.getPrice());
+                    productItem.setProductId(product.getId());
+                    productItem.setQuantity(new Random().nextInt(50) + 1);
+                    productItem.setBill(bill);
                     productItemRepository.save(productItem);
                 });
             });
