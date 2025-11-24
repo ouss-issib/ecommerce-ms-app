@@ -81,7 +81,7 @@ Configuration centralisée avec support :
 ### 📦 Inventory-Service via Gateway
 | Gateway – Customers Route | Gateway – Products Route |
 |---|---|
-| ![](./captures/gateway-customers.png) | ![](./captures/gateway-products.png) |
+| ![](./captures/gateway_customers.png) | ![](./captures/gateway_products.png) |
 
 ---
 
