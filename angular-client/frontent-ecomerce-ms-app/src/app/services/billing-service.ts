@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class BillingService {
-  private baseUrl = 'http://localhost:8888/BILLING-SERVICE/bills';
+  private baseUrl = 'http://localhost:8888/billing-service/bills';
 
   constructor(private http: HttpClient) {}
 

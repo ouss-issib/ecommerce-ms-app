@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { Customer } from '../../../models/Customer';
@@ -14,9 +14,13 @@ export class CustomerList implements OnInit {
   customers: Customer[] = [];
   columns = ['id', 'name', 'email'];
 
-  constructor(private service: CustomerService) {}
+  constructor(private cd: ChangeDetectorRef,private service: CustomerService) {}
 
   ngOnInit() {
-    this.service.getCustomers().subscribe(data => this.customers = data);
+    this.service.getCustomers().subscribe(data =>
+      {
+        this.customers = data
+       this.cd.detectChanges();
+    });
   }
 }
