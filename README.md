@@ -101,6 +101,45 @@ cd ../gateway-service && mvn spring-boot:run
 cd ../services/customer-service && mvn spring-boot:run
 cd ../inventory-service && mvn spring-boot:run
 cd ../billing-service && mvn spring-boot:run
+```
 
-# 5️⃣ Lancer le Client Angular
-cd ../../angular-client && npm install && ng serve -o
+
+### 🎨 UI & Design
+
+Le front-end utilise **Angular Material** :
+
+- Material Table (`mat-table`)
+- Material Toolbar (`mat-toolbar`)
+- Material Buttons (`mat-button`)
+- Material Cards (`mat-card`)
+- Material Form Fields (`mat-form-field`)
+- Material Inputs (`mat-input`)
+- Material Icons (`mat-icon`)
+
+Ce choix permet d’obtenir une interface moderne, responsive et cohérente.
+
+### 🔗 Communication avec les micro-services
+
+Toutes les requêtes passent par la **Gateway** :
+
+- `/customers/**`
+- `/products/**`
+- `/bills/**`
+
+Les micro-services ne sont jamais appelés directement.
+
+
+### 📦 Customers List via Gateway Inside Frontent
+| Customers List | 
+|---|
+| ![](./angular-client/frontent-ecomerce-ms-app/captures/customers.png) |
+
+
+### ▶️ Lancer le projet
+
+```bash
+cd angular-client
+ng serve 
+
+
+
